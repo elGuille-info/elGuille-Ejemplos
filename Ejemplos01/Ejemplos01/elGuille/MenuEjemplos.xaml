@@ -22,7 +22,7 @@
                            TextColor="{StaticResource ColorBlanco}"/>
                     <Button x:Name="btnPost02jun2021" FontSize="Micro"
                             BackgroundColor="Gold" TextColor="Black"
-                            Text="Post Trucos para Xamarin.Forms y .NET MAUI en dispositivos" 
+                            Text="Post: Trucos para Xamarin.Forms y .NET MAUI en dispositivos" 
                             Clicked="btnPost02jun2021_Clicked"/>
                     <Button x:Name="btnEjemplo01" Text="Ejemplo 01 - 2 junio 2021" 
                         Clicked="btnEjemplo01_Clicked"/>
@@ -33,12 +33,7 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout Style="{StaticResource StackVPBotones}">
-                <Label x:Name="LabelStatus" Style="{StaticResource LabelStatusWiz}"
-                       Padding="{OnPlatform iOS='6,0', Default=3}"
-                       Text="{OnPlatform Android=' Dispositivo \'Android\' ', 
-                                         iOS=' Dispositivo iPhone (\'iOS\') ', 
-                                         UWP='Dispositivo UWP (\'Windows 10, XBox\')'}"/>
-
+                <Label x:Name="LabelStatus" Style="{StaticResource LabelStatusWiz}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
