@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejemplos01.elGuille.MenuEjemplos" 
+             Appearing="ContentPage_Appearing"
+             Title="Menú Ejemplos elGuille">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10">
+                <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#96d1ff">
+                    <Label Text="Menú con los ejemplos de elGuille"
+                           FontSize="Title" TextColor="{StaticResource ColorAzul2}"
+                           Padding="{OnPlatform iOS=10,Default=40}"
+                           VerticalOptions="StartAndExpand" 
+                           HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+                <Label MinimumHeightRequest="50"/>
+                <StackLayout>
+                    <Label Text="Ejemplos del 2 de junio 2021" 
+                           HorizontalTextAlignment="Center"
+                           BackgroundColor="{StaticResource ColorAzul1}"
+                           TextColor="{StaticResource ColorBlanco}"/>
+                    <Button x:Name="btnPost02jun2021" FontSize="Micro"
+                            BackgroundColor="Gold" TextColor="Black"
+                            Text="Post Trucos para Xamarin.Forms y .NET MAUI en dispositivos" 
+                            Clicked="btnPost02jun2021_Clicked"/>
+                    <Button x:Name="btnEjemplo01" Text="Ejemplo 01 - 2 junio 2021" 
+                        Clicked="btnEjemplo01_Clicked"/>
+                    <Label MinimumHeightRequest="30"/>
+                    <Button x:Name="btnEjercicios01y02" Text="Ejercicios 01 y 02 - 2 junio 2021" 
+                        Clicked="btnEjercicios01y02_Clicked"/>
+                    <Label MinimumHeightRequest="60"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Style="{StaticResource StackVPBotones}">
+                <Label x:Name="LabelStatus" Style="{StaticResource LabelStatusWiz}"
+                       Padding="{OnPlatform iOS='6,0', Default=3}"
+                       Text="{OnPlatform Android=' Dispositivo \'Android\' ', 
+                                         iOS=' Dispositivo iPhone (\'iOS\') ', 
+                                         UWP='Dispositivo UWP (\'Windows 10, XBox\')'}"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

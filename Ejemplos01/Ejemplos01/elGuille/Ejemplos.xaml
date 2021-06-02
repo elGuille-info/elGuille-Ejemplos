@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejemplos01.elGuille.Ejemplos" 
+             Appearing="ContentPage_Appearing" 
+             Title="Ejemplos para elGuille">
+    <ContentPage.Resources>
+        <Color x:Key="Accent">#96d1ff</Color>
+        <Color x:Key="ColorAzul1">#0073cf</Color>
+        <Color x:Key="ColorAzul2">#0043b1</Color>
+        <Color x:Key="ColorBlanco">White</Color>
+
+        <!-- Valores generales -->
+        <Style TargetType="{x:Type Label}" ApplyToDerivedTypes="True" CanCascade="True">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+        <Style TargetType="Button" ApplyToDerivedTypes="True" CanCascade="True">
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="TextColor" Value="{StaticResource ColorBlanco}"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource ColorAzul1}"/>
+        </Style>
+        <Style TargetType="{x:Type ContentPage}" ApplyToDerivedTypes="True" CanCascade="True">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="Padding" Value="{OnPlatform iOS='0,20,0,10', Default=0}"/>
+        </Style>
+
+         <!-- Valores particulares -->
+        <Style x:Key="LabelStatusWiz" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="Micro"/>
+            <Setter Property="FontAttributes" Value="None" />
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            <Setter Property="TextColor" Value="{StaticResource ColorBlanco}"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource ColorAzul2}"/>
+        </Style>
+        <Style x:Key="BtnNavegar" TargetType="{x:Type Button}" >
+            <Setter Property="FontAttributes" Value="None" />
+            <Setter Property="FontSize" Value="Micro" />
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="TextTransform" Value="Uppercase"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="WidthRequest" Value="100"/>
+            <Setter Property="CornerRadius" Value="5" />
+        </Style>
+        <Style x:Key="StackVPHor" TargetType="{x:Type StackLayout}">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="Spacing" Value="4"/>
+        </Style>
+        <Style x:Key="StackVPVert" TargetType="{x:Type StackLayout}">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="Spacing" Value="5"/>
+        </Style>
+        <Style x:Key="StackVPBotones" TargetType="{x:Type StackLayout}">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Spacing" Value="3"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!" 
+                   FontSize="Title" BackgroundColor="#96d1ff" Padding="{OnPlatform iOS=10,Default=40}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            
+            <StackLayout Orientation="Horizontal" Padding="20">
+                <Label Text="DevicePlatform: " VerticalOptions="Center"/>
+                <Label x:Name="LabelDevicePlatform" Padding="6"
+                       FontSize="{OnPlatform iOS=Micro, Default=Small}"
+                       TextColor="White"
+                       BackgroundColor="{OnPlatform Android=#FA3F7E, iOS=#34C759, UWP=#0077DF}" />
+            
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="20">
+                <Label Text="DeviceIdiom: " TextColor="{OnPlatform iOS=Green, Default=Red}"
+                       VerticalOptions="Center"/>
+                
+                <Label x:Name="LabelDeviceIdiom" Padding="6" 
+                       TextColor="{OnPlatform Android=Black, iOS=Blue, UWP=Green}"
+                       BackgroundColor="Wheat"
+                       FontSize="{OnIdiom Tablet=Small, Phone=Micro, Desktop=Medium}"/>
+                
+            </StackLayout>
+            <Button Text="Un botón con espacio (padding) delante y detrás" Padding="6,0" Margin="4,5,6,7" />
+
+            <StackLayout Style="{StaticResource StackVPBotones}">
+                <!-- Aquí da igual ese espacio ya que el botón se ensancha.
+                        Igual que el Padding, 
+                        pero solo es para ver el ejemplo de cómo hacerlo.
+                -->
+                <Button x:Name="btnAtras" 
+                        Text="{OnPlatform iOS= ATRÁS , Default=ATRÁS}" 
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource BtnNavegar}"
+                        Clicked="btnAtras_Clicked"/>
+                
+                <Label x:Name="LabelStatus" Style="{StaticResource LabelStatusWiz}"
+                       Padding="{OnPlatform iOS='6,0', Default=0}"
+                       Text="{OnPlatform Android=' Dispositivo \'Android\' ', 
+                                         iOS=' Dispositivo iPhone (\'iOS\') ', 
+                                         UWP='Dispositivo UWP (\'Windows 10, XBox\')'}"/>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejemplos01.elGuille.Ejercicios01_02"
+             Title="Ejercicios 01 y 02 (elGuille)" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10">
+                <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#96d1ff">
+                    <Label Text="Ejercicios 01 y 02 (elGuille)"
+                           FontSize="Title" TextColor="{StaticResource ColorAzul2}"
+                           Padding="{OnPlatform iOS=10,Default=40}"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+                <Label MinimumHeightRequest="50"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="4" Spacing="3">
+                <Label Text="2 Switch con botones: " VerticalOptions="Center"/>
+                <Switch />
+                <!-- Los espacios detrás no se respetan... habrá que usar padding -->
+                <Button Text=" Un Switch "
+                        Padding="{OnPlatform iOS='6,0', Android='6,0', Default=4}"/>
+                <Switch />
+                <Button Text=" Otro Switch "
+                        Padding="{OnPlatform iOS='6,0', Android='6,0', Default=4}"/>
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource StackVPBotones}">
+                <Button x:Name="btnAtras" 
+                        Text="ATRÁS" 
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource BtnNavegar}"
+                        Clicked="btnAtras_Clicked"/>
+                <Label x:Name="LabelStatus" Style="{StaticResource LabelStatusWiz}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejemplos01.AboutPage" 
+             Title="Acerca de Ejemplos elGuille" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10">
+                <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#96d1ff">
+                    <Label Text="Acerca de los ejemplos de elGuille"
+                   FontSize="Title" TextColor="{StaticResource ColorAzul2}"
+                   Padding="{OnPlatform iOS=10,Default=40}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+                <Label MinimumHeightRequest="50"/>
+            </StackLayout>
+            <StackLayout Style="{StaticResource StackVPBotones}">
+                <StackLayout Style="{StaticResource StackVPHor}">
+                    <Button x:Name="btnInicio" 
+                            Text="Ir a inicio" 
+                            HorizontalOptions="FillAndExpand"
+                            Style="{StaticResource BtnNavegar}"
+                            Clicked="btnInicio_Clicked"/>
+                </StackLayout>
+                <Label x:Name="LabelStatus" Style="{StaticResource LabelStatusWiz}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
