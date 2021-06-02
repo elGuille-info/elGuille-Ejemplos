@@ -11,6 +11,6 @@ Saber si hay conexión a Internet (y qué tipo de conexión)
 Navegar entre páginas teniendo en cuenta si falla la navegación no modal (en iOS me suele fallar ese tipo de navegación).
 Y algunas cosas más.
 
-Échale un vistazo a App.xaml.cs y a App.xaml para los estilos usados y otras cosillas como para usar los colores según el tema sea claro u oscuro.
+Échale un vistazo a [App.xaml.cs](https://github.com/elGuille-info/elGuille-Ejemplos/blob/master/Ejemplos01/Ejemplos01/App.xaml.cs) y a [App.xaml](https://github.com/elGuille-info/elGuille-Ejemplos/blob/master/Ejemplos01/Ejemplos01/App.xaml) para los estilos usados y otras cosillas como para usar los colores según el tema sea claro u oscuro.
 
 
