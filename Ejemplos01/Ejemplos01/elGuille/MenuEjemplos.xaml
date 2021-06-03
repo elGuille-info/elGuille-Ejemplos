@@ -9,10 +9,7 @@
             <StackLayout Padding="10">
                 <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#96d1ff">
                     <Label Text="Menú con los ejemplos de elGuille"
-                           FontSize="Title" TextColor="{StaticResource ColorAzul2}"
-                           Padding="{OnPlatform iOS=10,Default=40}"
-                           VerticalOptions="StartAndExpand" 
-                           HorizontalOptions="CenterAndExpand" />
+                           Style="{StaticResource LabelTitulo}"/>
                 </StackLayout>
                 <Label MinimumHeightRequest="50"/>
                 <StackLayout>

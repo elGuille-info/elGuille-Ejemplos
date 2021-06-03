@@ -27,18 +27,17 @@ namespace Ejemplos01.elGuille
 
         private void btnEjemplo01_Clicked(object sender, EventArgs e)
         {
-            App.NavegarA(new Ejemplos());
+            App.IrPagina(new Ejemplos());
         }
 
         private void btnEjercicios01y02_Clicked(object sender, EventArgs e)
         {
-            App.NavegarA(new Ejercicios01_02());
+            App.IrPagina(new Ejercicios01_02());
         }
 
-        async private void btnPost02jun2021_Clicked(object sender, EventArgs e)
+        private void btnPost02jun2021_Clicked(object sender, EventArgs e)
         {
-            var uri = new Uri("https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/");
-            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+            App.NavegarA("https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/");
         }
     }
 }

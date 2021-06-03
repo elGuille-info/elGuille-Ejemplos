@@ -15,7 +15,7 @@
         <Style TargetType="{x:Type Label}" ApplyToDerivedTypes="True" CanCascade="True">
             <Setter Property="BackgroundColor" Value="Transparent"/>
             <!-- Sin el color del texto no se ve en modo oscuro en iOS-->
-            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="TextColor" Value="{StaticResource ColorAzul1}"/>
         </Style>
         <Style TargetType="Button" ApplyToDerivedTypes="True" CanCascade="True">
             <Setter Property="FontSize" Value="Small" />
@@ -33,6 +33,17 @@
         </Style>
 
         <!-- Valores particulares -->
+        <Style x:Key="LabelTitulo" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="FontAttributes" Value="None" />
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            <Setter Property="Padding" Value="{OnPlatform iOS=10,Default=40}"/>
+            <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+            <Setter Property="TextColor" Value="{StaticResource ColorAzul2}"/>
+            <!--<Setter Property="BackgroundColor" Value="{StaticResource Accent}"/>-->
+        </Style>
+
         <Style x:Key="LabelStatusWiz" TargetType="{x:Type Label}">
             <Setter Property="FontSize" Value="Micro"/>
             <Setter Property="FontAttributes" Value="None" />

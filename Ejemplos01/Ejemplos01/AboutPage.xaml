@@ -8,12 +8,29 @@
             <StackLayout Padding="10">
                 <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#96d1ff">
                     <Label Text="Acerca de los ejemplos de elGuille"
-                   FontSize="Title" TextColor="{StaticResource ColorAzul2}"
-                   Padding="{OnPlatform iOS=10,Default=40}"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
+                           Style="{StaticResource LabelTitulo}"/>
                 </StackLayout>
                 <Label MinimumHeightRequest="50"/>
+                <Label FontSize="Medium">
+Ejemplos y ejercicios publicados en los trucos y tutoriales de Xamarin.Forms en elguillemola.com.
+
+El código de esta aplicación de ejemplo está publicado en GitHub.
+                    
+Pulsa en los siguientes botones para ir a la página de los trucos con Xamarin.Forms y .NET MAUI y al blog elguillemola.com.
+                </Label>
+                <Label MinimumHeightRequest="50"/>
+                <Button x:Name="btnElguillemola" FontSize="Small"
+                        Text="Ir al blog elguillemola.com" 
+                        Clicked="btnElguillemola_Clicked"/>
+                <Label MinimumHeightRequest="50"/>
+                <Button x:Name="btnPost02jun2021" FontSize="Micro"
+                        BackgroundColor="Gold" TextColor="Black"
+                        Text="Post: Trucos para Xamarin.Forms y .NET MAUI en dispositivos" 
+                        Clicked="btnPost02jun2021_Clicked"/>
+                <Label MinimumHeightRequest="50"/>
+                <Button x:Name="btnGitHub" FontSize="Micro"
+                        Text="Ir al repositorio de GitHub de esta aplicación" 
+                        Clicked="btnGitHub_Clicked"/>
             </StackLayout>
             <StackLayout Style="{StaticResource StackVPBotones}">
                 <StackLayout Style="{StaticResource StackVPHor}">

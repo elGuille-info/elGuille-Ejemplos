@@ -17,8 +17,11 @@ namespace Ejemplos01
 
             MainPage = new AppShell();
         }
-
-        async public static void NavegarA(Page pagina)
+        /// <summary>
+        /// Ir a la página indicada.
+        /// </summary>
+        /// <param name="pagina">La página a la que se quiere ir.</param>
+        async public static void IrPagina(Page pagina)
         {
             if (pagina == null)
                 throw new ArgumentException("El valor de 'pagina' no está instanciado.");
@@ -32,19 +35,44 @@ namespace Ejemplos01
                 await Current.MainPage.Navigation.PushModalAsync(pagina);
             }
         }
-
+        /// <summary>
+        /// Ir a la página anterior.
+        /// </summary>
         async public static void IrAtras()
         {
             //
             // Se supone que si se cumple que NavigationStack.Count es cero
             // es que iOS o la plataforma no soporta la navegación no modal
             //
-            var stack = Current.MainPage.Navigation.NavigationStack;
-            if (stack.Count == 0)
+            if (Current.MainPage.Navigation.NavigationStack.Count == 0)
                 await Current.MainPage.Navigation.PopModalAsync();
             else
                 await Current.MainPage.Navigation.PopAsync();
         }
+        /// <summary>
+        /// Ir a la página de inicio.
+        /// </summary>
+        async public static void IrInicio()
+        {
+            try
+            {
+                await Shell.Current.GoToAsync("//MenuEjemplos");
+            }
+            catch
+            {
+                Current.MainPage = MenuEjemplos.Current;
+            }
+        }
+        /// <summary>
+        /// Navegar a la dirección indicada.
+        /// </summary>
+        /// <param name="url">La página web a la que queremos navegar.</param>
+        async public static void NavegarA(string url)
+        {
+            var uri = new Uri(url);
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        }
+
 
         /// <summary>
         /// Comprueba la conexión a Internet y si hay una versión más reciente.

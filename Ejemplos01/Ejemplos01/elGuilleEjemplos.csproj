@@ -5,11 +5,12 @@
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <Authors>elGuille</Authors>
     <Description>Ejemplos de los artículos de elGuille (elguillemola.com)
-Iniciado el 02-jun-2021</Description>
+Iniciado el 2-junio-2021, revisión del 3-junio-2021</Description>
     <Copyright>(c) elGuille, 2021</Copyright>
     <PackageProjectUrl>https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/elGuille-info/elGuille-Ejemplos</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

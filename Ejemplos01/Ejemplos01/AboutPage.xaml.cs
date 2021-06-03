@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Ejemplos01.elGuille;
 
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,16 +25,24 @@ namespace Ejemplos01
             LabelStatus.Text = App.InformacionDispositivo();
         }
 
-        async private void btnInicio_Clicked(object sender, EventArgs e)
+        private void btnInicio_Clicked(object sender, EventArgs e)
         {
-            try
-            {
-                await Shell.Current.GoToAsync("//MenuEjemplos");
-            }
-            catch
-            {
-                Application.Current.MainPage = MenuEjemplos.Current;
-            }
+            App.IrInicio();
+        }
+
+        private void btnElguillemola_Clicked(object sender, EventArgs e)
+        {
+            App.NavegarA("https://www.elguillemola.com/");
+        }
+
+        private void btnPost02jun2021_Clicked(object sender, EventArgs e)
+        {
+            App.NavegarA("https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/");
+        }
+
+        private void btnGitHub_Clicked(object sender, EventArgs e)
+        {
+            App.NavegarA("https://github.com/elGuille-info/elGuille-Ejemplos");
         }
     }
 }
