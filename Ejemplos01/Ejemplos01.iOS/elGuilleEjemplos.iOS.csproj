@@ -46,11 +46,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>Apple Development: Guillermo Som (AMC4NUBHCM)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>None</MtouchLink>
     <MtouchInterpreter>-all</MtouchInterpreter>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -137,9 +138,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Ejemplos01\Ejemplos01.csproj">
-      <Project>{40979DF4-35A5-4FED-9B23-EC62DCAA858C}</Project>
-      <Name>Ejemplos01</Name>
+    <ProjectReference Include="..\Ejemplos01\elGuilleEjemplos.csproj">
+      <Project>{7193B552-7512-4613-B3A8-652AFD81AE41}</Project>
+      <Name>elGuilleEjemplos</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

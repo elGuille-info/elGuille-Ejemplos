@@ -148,13 +148,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.12"/>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.12" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ejemplos01\Ejemplos01.csproj">
-      <Project>{40979DF4-35A5-4FED-9B23-EC62DCAA858C}</Project>
-      <Name>Ejemplos01</Name>
+    <ProjectReference Include="..\Ejemplos01\elGuilleEjemplos.csproj">
+      <Project>{7193B552-7512-4613-B3A8-652AFD81AE41}</Project>
+      <Name>elGuilleEjemplos</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

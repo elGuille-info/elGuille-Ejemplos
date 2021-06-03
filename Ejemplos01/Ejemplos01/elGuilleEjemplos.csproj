@@ -3,6 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <Authors>elGuille</Authors>
+    <Description>Ejemplos de los artículos de elGuille (elguillemola.com)
+Iniciado el 02-jun-2021</Description>
+    <Copyright>(c) elGuille, 2021</Copyright>
+    <PackageProjectUrl>https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/elGuille-info/elGuille-Ejemplos</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,5 +36,17 @@
     <EmbeddedResource Update="elGuille\MenuEjemplos.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="elGuille\Ejemplos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="elGuille\Ejercicios01_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>
