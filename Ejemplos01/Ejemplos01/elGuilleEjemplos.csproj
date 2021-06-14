@@ -5,12 +5,14 @@
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <Authors>elGuille</Authors>
     <Description>Ejemplos de los artículos de elGuille (elguillemola.com)
-Iniciado el 2-junio-2021, revisión del 3-junio-2021</Description>
+Iniciado el 2-junio-2021, revisión del 14-junio-2021</Description>
     <Copyright>(c) elGuille, 2021</Copyright>
     <PackageProjectUrl>https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/elGuille-info/elGuille-Ejemplos</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <FileVersion>1.0.0.2</FileVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,11 +33,17 @@ Iniciado el 2-junio-2021, revisión del 3-junio-2021</Description>
     <EmbeddedResource Update="elGuille\Ejemplos.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="elGuille\Ejemplos02.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="elGuille\Ejercicios01_02.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="elGuille\MenuEjemplos.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceDictionaryElGuille.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

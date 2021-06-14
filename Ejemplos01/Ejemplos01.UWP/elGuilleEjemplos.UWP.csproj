@@ -8,8 +8,8 @@
     <TemplateGuid>{98C37F10-6541-44BE-B1E6-7EB3EB8C08F1}</TemplateGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ejemplos01.UWP</RootNamespace>
-    <AssemblyName>Ejemplos01.UWP</AssemblyName>
+    <RootNamespace>elGuilleEjemplos.UWP</RootNamespace>
+    <AssemblyName>elGuilleEjemplos.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>

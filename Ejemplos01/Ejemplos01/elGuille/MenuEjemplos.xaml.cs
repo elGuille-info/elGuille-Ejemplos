@@ -8,7 +8,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Ejemplos01.elGuille
+namespace elGuilleEjemplos.elGuille
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuEjemplos : ContentPage
@@ -38,6 +38,16 @@ namespace Ejemplos01.elGuille
         private void btnPost02jun2021_Clicked(object sender, EventArgs e)
         {
             App.NavegarA("https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/");
+        }
+
+        private void btnEjemplo1Post14jun2021_Clicked(object sender, EventArgs e)
+        {
+            App.NavegarA("https://www.elguillemola.com/trucos-para-xamarin-forms-y-net-maui-en-dispositivos/");
+        }
+
+        private void btnEjemplos14jun2021_Clicked(object sender, EventArgs e)
+        {
+            App.IrPagina(new elGuilleEjemplos.elGuille.Ejemplos02());
         }
     }
 }

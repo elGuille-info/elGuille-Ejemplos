@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Ejemplos01.elGuille
+namespace elGuilleEjemplos.elGuille
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Ejercicios01_02 : ContentPage

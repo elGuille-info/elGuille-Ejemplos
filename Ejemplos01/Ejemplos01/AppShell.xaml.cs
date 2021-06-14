@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace Ejemplos01
+namespace elGuilleEjemplos
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Text;
 
-using Ejemplos01.elGuille;
+using elGuilleEjemplos.elGuille;
 
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Ejemplos01
+namespace elGuilleEjemplos
 {
     public partial class App : Application
     {

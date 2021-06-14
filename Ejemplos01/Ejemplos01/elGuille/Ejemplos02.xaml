@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="elGuilleEjemplos.elGuille.Ejemplos02" 
+             Appearing="ContentPage_Appearing" 
+             Title="Ejemplos del post del 14 de junio 2021">
+    <ContentPage.Resources>
+        <ResourceDictionary Source="../ResourceDictionaryElGuille.xaml"/>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ejemplos del post del 14 de junio 2021"
+                   FontSize="Title" 
+                   BackgroundColor="#96d1ff" TextColor="White"
+                   Padding="{OnPlatform iOS=10,Default=40}"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="FillAndExpand" />
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label Text="Ejemplo 1: Usando Application.Resources" 
+                           FontAttributes="Bold" FontSize="Subtitle"/>
+                    <Line HeightRequest="20"/>
+                    <Label x:Name="LabelInternet" FontAttributes="Bold"
+                           TextColor="Green" FontSize="Medium"
+                           Text="Ejemplo para usar un valor de Application.Resources"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="btnUsarColorAzul" 
+                                Text="Usar ColorAzul" 
+                                BackgroundColor="{StaticResource ColorAzul}"
+                                Clicked="btnUsarColorAzul_Clicked"/>
+                        <Button x:Name="btnUsarColorRojo" 
+                                Text="Usar ColorRojo" 
+                                BackgroundColor="{StaticResource ColorRojo}"
+                                Clicked="btnUsarColorRojo_Clicked"/>
+                        <Button x:Name="btnUsarPredeterminado" 
+                                Text="Usar Predeterminado" 
+                                BackgroundColor="Green"
+                                Clicked="btnUsarPredeterminado_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+                <Line HeightRequest="60"/>
+                <StackLayout>
+                    <Label Text="Ejemplo 2: Usando ResourceDictionary" 
+                           FontAttributes="Bold" FontSize="Subtitle"/>
+                    <Line HeightRequest="20"/>
+                    <Label x:Name="LabelInternet2" FontAttributes="Bold"
+                           TextColor="Green" FontSize="Medium"
+                           Text="Ejemplo para usar un valor de ResourceDictionary"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="btnUsarColor2Azul" 
+                                Text="Usar ColorAzul" 
+                                BackgroundColor="{StaticResource ColorAzul}"
+                                Clicked="btnUsarColor2Azul_Clicked"/>
+                        <Button x:Name="btnUsar2ColorRojo" 
+                                Text="Usar ColorRojo" 
+                                BackgroundColor="{StaticResource ColorRojo}"
+                                Clicked="btnUsar2ColorRojo_Clicked"/>
+                        <Button x:Name="btnUsarPredeterminado2" 
+                                Text="Usar Predeterminado" 
+                                BackgroundColor="Green"
+                                Clicked="btnUsarPredeterminado2_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+                <Line HeightRequest="60"/>
+                <StackLayout>
+                    <Label Text="Ejemplo 3: Usando ResourceDictionary en una página" 
+                           FontAttributes="Bold" FontSize="Subtitle"/>
+                    <Line HeightRequest="20"/>
+                    <Label x:Name="LabelInternet3" Style="{StaticResource LabelEjemplo3}"
+                           Text="Ejemplo para usar un valor de ResourceDictionary en una página"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="btnUsarColor3Azul" 
+                                Text="Usar ColorAzul" 
+                                BackgroundColor="{StaticResource ColorAzul}"
+                                Clicked="btnUsarColor3Azul_Clicked"/>
+                        <Button x:Name="btnUsar3ColorRojo" 
+                                Text="Usar ColorRojo" 
+                                BackgroundColor="{StaticResource ColorRojo}"
+                                Clicked="btnUsar3ColorRojo_Clicked"/>
+                        <Button x:Name="btnUsarPredeterminado3" 
+                                Text="Usar Predeterminado" 
+                                BackgroundColor="Green"
+                                Clicked="btnUsarPredeterminado3_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

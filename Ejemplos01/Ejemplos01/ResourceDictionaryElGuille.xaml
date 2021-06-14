@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="Color3Azul">#0073cf</Color>
+    <Color x:Key="Color3Rojo">Firebrick</Color>
+    <Color x:Key="Color3Blanco">White</Color>
+
+    <Style x:Key="LabelEjemplo3" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="TextColor" Value="Green"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource Key=Color3Blanco}"/>
+    </Style>
+    <Style x:Key="LabelEjemplo3Azul" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="FontAttributes" Value="Italic" />
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="TextColor" Value="{StaticResource Color3Azul}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Color3Blanco}"/>
+    </Style>
+    <Style x:Key="LabelEjemplo3Rojo" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="TextColor" Value="{StaticResource Color3Rojo}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Color3Blanco}"/>
+    </Style>
+
+    <Color x:Key="ColorAzul">#0073cf</Color>
+    <Color x:Key="ColorRojo">Firebrick</Color>
+    
+
+    <!-- Los recursos definidos originalmente en App.xaml -->
+    <Color x:Key="Accent">#96d1ff</Color>
+    <Color x:Key="ColorAzul1">#0073cf</Color>
+    <Color x:Key="ColorAzul2">#0043b1</Color>
+    <Color x:Key="ColorBlanco">White</Color>
+
+    <Color x:Key="Primary">#2196F3</Color>
+
+    <!-- Valores generales -->
+    <Style TargetType="{x:Type Label}" ApplyToDerivedTypes="True" CanCascade="True">
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <!-- Sin el color del texto no se ve en modo oscuro en iOS-->
+        <Setter Property="TextColor" Value="{StaticResource ColorAzul1}"/>
+    </Style>
+    <Style TargetType="Button" ApplyToDerivedTypes="True" CanCascade="True">
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource ColorBlanco},Dark={StaticResource ColorAzul2}}"/>
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource ColorAzul1},Dark={StaticResource Accent}}"/>
+    </Style>
+    <Style TargetType="{x:Type Switch}">
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <!--<Setter Property="IsVisible" Value="False"/>-->
+    </Style>
+    <Style TargetType="{x:Type ContentPage}" ApplyToDerivedTypes="True" CanCascade="True">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="Padding" Value="{OnPlatform iOS='0,20,0,10', Default=0}"/>
+    </Style>
+
+    <!-- Valores particulares -->
+    <Style x:Key="LabelTitulo" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="Title"/>
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        <Setter Property="Padding" Value="{OnPlatform iOS=10,Default=40}"/>
+        <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+        <Setter Property="TextColor" Value="{StaticResource ColorAzul2}"/>
+        <!--<Setter Property="BackgroundColor" Value="{StaticResource Accent}"/>-->
+    </Style>
+
+    <Style x:Key="LabelStatusWiz" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="Micro"/>
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+        <Setter Property="TextColor" Value="{StaticResource ColorBlanco}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource ColorAzul2}"/>
+    </Style>
+    <Style x:Key="BtnNavegar" TargetType="{x:Type Button}" >
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="TextTransform" Value="Uppercase"/>
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="WidthRequest" Value="100"/>
+        <Setter Property="CornerRadius" Value="5" />
+    </Style>
+    <Style x:Key="StackVPHor" TargetType="{x:Type StackLayout}">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Spacing" Value="4"/>
+    </Style>
+    <Style x:Key="StackVPVert" TargetType="{x:Type StackLayout}">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Spacing" Value="5"/>
+    </Style>
+    <Style x:Key="StackVPBotones" TargetType="{x:Type StackLayout}">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Spacing" Value="3"/>
+    </Style>
+
+    <!-- Se pueden anidar, aunque no es necesario .
+         Esto lo tengo así porque antes estaba definido dentro de App.xaml
+    -->
+
+    <!--<ResourceDictionary>
+        <Color x:Key="Primary">#2196F3</Color>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="#332196F3" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ResourceDictionary>
+
+    <ResourceDictionary>
+        <Color x:Key="Color2Azul">#0073cf</Color>
+        <Color x:Key="Color2Rojo">Firebrick</Color>
+    </ResourceDictionary>-->
+
+</ResourceDictionary>

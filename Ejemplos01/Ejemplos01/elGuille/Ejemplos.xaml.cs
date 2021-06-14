@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 
-namespace Ejemplos01.elGuille
+namespace elGuilleEjemplos.elGuille
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Ejemplos : ContentPage

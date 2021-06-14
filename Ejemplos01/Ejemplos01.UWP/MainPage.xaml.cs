@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Ejemplos01.UWP
+namespace elGuilleEjemplos.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace Ejemplos01.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Ejemplos01.App());
+            LoadApplication(new elGuilleEjemplos.App());
         }
     }
 }

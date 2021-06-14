@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ejemplos01.elGuille.MenuEjemplos" 
+             x:Class="elGuilleEjemplos.elGuille.MenuEjemplos" 
              Appearing="ContentPage_Appearing"
              Title="Menú Ejemplos elGuille">
     <ContentPage.Content>
@@ -13,6 +13,19 @@
                 </StackLayout>
                 <Label MinimumHeightRequest="50"/>
                 <StackLayout>
+                    <Label Text="Ejemplos del 14 de junio 2021" 
+                           HorizontalTextAlignment="Center"
+                           BackgroundColor="{StaticResource ColorAzul1}"
+                           TextColor="{StaticResource ColorBlanco}"/>
+                    <Button x:Name="btnEjemplos14jun2021" 
+                            Text="Ejemplos del 14 junio 2014" 
+                            Clicked="btnEjemplos14jun2021_Clicked"/>
+                    <Button x:Name="btnEjemplo1Post14jun2021" FontSize="Micro"
+                            BackgroundColor="Gold" TextColor="Black"
+                            Text="Post: Acceder a los recursos definidos en ResourceDictionary o Application.Resources desde código (C#)" 
+                            Clicked="btnEjemplo1Post14jun2021_Clicked"/>
+                    <Label MinimumHeightRequest="30"/>
+
                     <Label Text="Ejemplos del 2 de junio 2021" 
                            HorizontalTextAlignment="Center"
                            BackgroundColor="{StaticResource ColorAzul1}"
@@ -22,7 +35,7 @@
                             Text="Post: Trucos para Xamarin.Forms y .NET MAUI en dispositivos" 
                             Clicked="btnPost02jun2021_Clicked"/>
                     <Button x:Name="btnEjemplo01" Text="Ejemplo 01 - 2 junio 2021" 
-                        Clicked="btnEjemplo01_Clicked"/>
+                            Clicked="btnEjemplo01_Clicked"/>
                     <Label MinimumHeightRequest="30"/>
                     <Button x:Name="btnEjercicios01y02" Text="Ejercicios 01 y 02 - 2 junio 2021" 
                         Clicked="btnEjercicios01y02_Clicked"/>
